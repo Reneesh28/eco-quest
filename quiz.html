@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive Environmental Awareness Quiz Session - EcoQuest">
+    <title>Interactive Quiz - EcoQuest</title>
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/quiz.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="quiz">
+    <div class="app-container">
+        <!-- Sidebar Placeholder -->
+        <aside id="sidebar" class="sidebar" aria-label="Main sidebar navigation"></aside>
+
+        <!-- Mobile Drawer Backdrop Overlay -->
+        <div id="sidebarOverlay" class="sidebar-overlay" aria-hidden="true"></div>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <!-- Header Placeholder -->
+            <header id="header" class="top-header" role="banner"></header>
+
+            <main class="content-body" id="mainContent">
+                <div class="quiz-container">
+                    <article class="quiz-card" aria-live="polite">
+                        
+                        <!-- Header Bar -->
+                        <div class="quiz-top-bar">
+                            <div class="quiz-category-tag">
+                                <span class="badge badge-mint" id="quizCatName">Climate Change</span>
+                                <span class="badge badge-neutral">Interactive Session</span>
+                            </div>
+                            <button type="button" class="quiz-exit-btn" id="quizExitBtn">Exit Quiz</button>
+                        </div>
+
+                        <!-- Progress Track -->
+                        <div class="quiz-progress-section">
+                            <div class="progress-info">
+                                <span id="quizQuestionCounter">Question 1 of 10</span>
+                                <span class="text-sm text-muted">+10 XP per question</span>
+                            </div>
+                            <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="10">
+                                <div class="progress-fill" id="quizProgressFill" style="width: 10%;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Question Prompt -->
+                        <div class="quiz-question-box">
+                            <h2 class="question-prompt" id="quizQuestionPrompt">Loading question...</h2>
+                        </div>
+
+                        <!-- 4 Options -->
+                        <div class="quiz-options-list" id="quizOptionsList" role="group" aria-label="Answer options"></div>
+
+                        <!-- Explanation Feedback Box -->
+                        <div class="quiz-explanation-box" id="quizFeedbackBox" aria-live="assertive"></div>
+
+                        <!-- Actions Footer -->
+                        <div class="quiz-footer">
+                            <span class="quiz-status-hint" id="quizStatusHint">Select an option to proceed</span>
+                            <div>
+                                <button type="button" class="btn btn-primary" id="quizSubmitBtn" disabled>
+                                    <span>Submit Answer</span>
+                                </button>
+                                <button type="button" class="btn btn-primary" id="quizContinueBtn" style="display: none;">
+                                    <span>Continue</span>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                    </article>
+                </div>
+            </main>
+
+            <!-- Footer Placeholder -->
+            <footer id="footer" class="site-footer" role="contentinfo"></footer>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/storage.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/gamification.js"></script>
+    <script src="js/challengeData.js"></script>
+    <script src="js/challenges.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.EcoQuizEngine) {
+                window.EcoQuizEngine.init();
+            }
+        });
+    </script>
+</body>
+</html>

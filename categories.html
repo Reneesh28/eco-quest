@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Environmental Quiz Categories - EcoQuest">
+    <title>Explore Quizzes - EcoQuest</title>
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/quiz.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="categories">
+    <div class="app-container">
+        <!-- Sidebar Placeholder -->
+        <aside id="sidebar" class="sidebar" aria-label="Main sidebar navigation"></aside>
+
+        <!-- Mobile Drawer Backdrop Overlay -->
+        <div id="sidebarOverlay" class="sidebar-overlay" aria-hidden="true"></div>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <!-- Header Placeholder -->
+            <header id="header" class="top-header" role="banner"></header>
+
+            <main class="content-body" id="mainContent">
+                <div class="categories-container">
+                    
+                    <!-- Intro Card -->
+                    <section class="categories-intro">
+                        <h2>Environmental Quiz Categories</h2>
+                        <p>Select a learning domain below to test your ecological literacy. Each quiz consists of 10 structured multiple-choice questions designed to build foundational and intermediate environmental science knowledge.</p>
+                    </section>
+
+                    <!-- Categories Grid (4 Categories) -->
+                    <section class="quiz-categories-grid" aria-label="Available Quiz Categories">
+                        
+                        <!-- Category 1: Climate Change -->
+                        <article class="quiz-cat-card" data-category="climate">
+                            <div>
+                                <div class="quiz-cat-header">
+                                    <div class="quiz-cat-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                            <path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"></path>
+                                        </svg>
+                                    </div>
+                                    <span class="badge badge-mint">Beginner &bull; Intermediate</span>
+                                </div>
+                                <h3 class="quiz-cat-title">Climate Change</h3>
+                                <p class="quiz-cat-desc">Explore the atmospheric science of greenhouse gases, global temperature trends, and climate adaptation strategies.</p>
+                                
+                                <div class="quiz-cat-topics">
+                                    <span class="topic-pill">Global Warming</span>
+                                    <span class="topic-pill">Greenhouse Gases</span>
+                                    <span class="topic-pill">Carbon Footprint</span>
+                                    <span class="topic-pill">Adaptation</span>
+                                </div>
+                            </div>
+
+                            <div class="quiz-cat-footer">
+                                <span class="quiz-cat-meta">10 Questions &bull; 100 XP</span>
+                                <button type="button" class="btn btn-primary btn-sm start-instructions-btn" data-category="climate">
+                                    <span>Start Quiz</span>
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                    </svg>
+                                </button>
+                            </div>
+                        </article>
+
+                        <!-- Category 2: Waste Management -->
+                        <article class="quiz-cat-card" data-category="waste">
+                            <div>
+                                <div class="quiz-cat-header">
+                                    <div class="quiz-cat-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                            <path d="M3 6h18"></path>
+                                            <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
+                                            <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
+                                            <line x1="10" y1="11" x2="10" y2="17"></line>
+                                            <line x1="14" y1="11" x2="14" y2="17"></line>
+                                        </svg>
+                                    </div>
+                                    <span class="badge badge-mint">Beginner &bull; Intermediate</span>
+                                </div>
+                                <h3 class="quiz-cat-title">Waste Management</h3>
+                                <p class="quiz-cat-desc">Learn effective waste segregation, circular recycling pathways, organic composting, and responsible e-waste disposal.</p>
+                                
+                                <div class="quiz-cat-topics">
+                                    <span class="topic-pill">Recycling</span>
+                                    <span class="topic-pill">Composting</span>
+                                    <span class="topic-pill">E-Waste</span>
+                                    <span class="topic-pill">Circular Economy</span>
+                                </div>
+                            </div>
+
+                            <div class="quiz-cat-footer">
+                                <span class="quiz-cat-meta">10 Questions &bull; 100 XP</span>
+                                <button type="button" class="btn btn-primary btn-sm start-instructions-btn" data-category="waste">
+                                    <span>Start Quiz</span>
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                    </svg>
+                                </button>
+                            </div>
+                        </article>
+
+                        <!-- Category 3: Biodiversity -->
+                        <article class="quiz-cat-card" data-category="biodiversity">
+                            <div>
+                                <div class="quiz-cat-header">
+                                    <div class="quiz-cat-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                            <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+                                            <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+                                        </svg>
+                                    </div>
+                                    <span class="badge badge-mint">Beginner &bull; Intermediate</span>
+                                </div>
+                                <h3 class="quiz-cat-title">Biodiversity</h3>
+                                <p class="quiz-cat-desc">Discover ecosystem balances, endangered species protections, habitat fragmentation solutions, and food web dynamics.</p>
+                                
+                                <div class="quiz-cat-topics">
+                                    <span class="topic-pill">Ecosystems</span>
+                                    <span class="topic-pill">Keystone Species</span>
+                                    <span class="topic-pill">Conservation</span>
+                                    <span class="topic-pill">Food Chains</span>
+                                </div>
+                            </div>
+
+                            <div class="quiz-cat-footer">
+                                <span class="quiz-cat-meta">10 Questions &bull; 100 XP</span>
+                                <button type="button" class="btn btn-primary btn-sm start-instructions-btn" data-category="biodiversity">
+                                    <span>Start Quiz</span>
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                    </svg>
+                                </button>
+                            </div>
+                        </article>
+
+                        <!-- Category 4: Renewable Energy -->
+                        <article class="quiz-cat-card" data-category="energy">
+                            <div>
+                                <div class="quiz-cat-header">
+                                    <div class="quiz-cat-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                            <path d="M12 2v8"></path>
+                                            <path d="m4.93 10.93 1.41 1.41"></path>
+                                            <path d="M2 18h2"></path>
+                                            <path d="M20 18h2"></path>
+                                            <path d="m19.07 10.93-1.41 1.41"></path>
+                                            <circle cx="12" cy="18" r="4"></circle>
+                                        </svg>
+                                    </div>
+                                    <span class="badge badge-mint">Beginner &bull; Intermediate</span>
+                                </div>
+                                <h3 class="quiz-cat-title">Renewable Energy</h3>
+                                <p class="quiz-cat-desc">Master clean energy principles including photovoltaic solar, onshore and offshore wind, geothermal loops, and smart grid storage.</p>
+                                
+                                <div class="quiz-cat-topics">
+                                    <span class="topic-pill">Solar PV</span>
+                                    <span class="topic-pill">Wind Power</span>
+                                    <span class="topic-pill">Hydroelectric</span>
+                                    <span class="topic-pill">Geothermal</span>
+                                </div>
+                            </div>
+
+                            <div class="quiz-cat-footer">
+                                <span class="quiz-cat-meta">10 Questions &bull; 100 XP</span>
+                                <button type="button" class="btn btn-primary btn-sm start-instructions-btn" data-category="energy">
+                                    <span>Start Quiz</span>
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                    </svg>
+                                </button>
+                            </div>
+                        </article>
+
+                    </section>
+                </div>
+
+                <!-- Quiz Instructions Modal Screen -->
+                <div id="instructionsModalOverlay" class="instructions-overlay" aria-hidden="true" role="dialog" aria-labelledby="modalCategoryTitle">
+                    <div class="instructions-modal">
+                        <div class="instructions-header">
+                            <div class="instructions-badge-row">
+                                <span class="badge badge-mint" id="modalDifficulty">Beginner &bull; Intermediate</span>
+                                <span class="badge badge-neutral">Standard Session</span>
+                            </div>
+                            <h2 class="instructions-title" id="modalCategoryTitle">Climate Change</h2>
+                            <p class="body-text text-muted" id="modalCategoryDesc">Understand greenhouse gases and climate science principles.</p>
+                        </div>
+
+                        <div class="instructions-meta-grid">
+                            <div class="meta-box">
+                                <span class="meta-box-label">Questions</span>
+                                <span class="meta-box-value" id="modalQuestionCount">10</span>
+                            </div>
+                            <div class="meta-box">
+                                <span class="meta-box-label">Est. Time</span>
+                                <span class="meta-box-value" id="modalEstTime">5–7 Mins</span>
+                            </div>
+                            <div class="meta-box">
+                                <span class="meta-box-label">Max Score</span>
+                                <span class="meta-box-value" id="modalMaxScore">100 XP</span>
+                            </div>
+                        </div>
+
+                        <div class="instructions-rules">
+                            <h3 class="rules-heading">Quiz Rules & Guidelines</h3>
+                            <ol class="rules-list">
+                                <li>Each question has four answer options with exactly one correct answer.</li>
+                                <li>Correct answers award 10 points (+10 XP). Incorrect answers award 0 points.</li>
+                                <li>Once you click "Submit Answer", your selection cannot be changed.</li>
+                                <li>An explanation is provided immediately following each submission.</li>
+                                <li>A full question-by-question review is provided upon completing the quiz.</li>
+                            </ol>
+                        </div>
+
+                        <div class="instructions-actions">
+                            <button type="button" class="btn btn-outline btn-sm" id="modalCancelBtn">Cancel</button>
+                            <a href="#" class="btn btn-primary btn-sm" id="modalStartQuizLink">
+                                <span>Begin Quiz</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+
+            <!-- Footer Placeholder -->
+            <footer id="footer" class="site-footer" role="contentinfo"></footer>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/storage.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/gamification.js"></script>
+    <script src="js/challengeData.js"></script>
+    <script src="js/challenges.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const overlay = document.getElementById('instructionsModalOverlay');
+            const titleEl = document.getElementById('modalCategoryTitle');
+            const descEl = document.getElementById('modalCategoryDesc');
+            const startLink = document.getElementById('modalStartQuizLink');
+            const cancelBtn = document.getElementById('modalCancelBtn');
+
+            const openModal = (categoryId) => {
+                if (!window.quizData || !window.quizData[categoryId]) return;
+                const cat = window.quizData[categoryId];
+
+                titleEl.textContent = cat.title;
+                descEl.textContent = cat.description;
+                startLink.href = `quiz.html?category=${encodeURIComponent(categoryId)}`;
+
+                overlay.classList.add('active');
+                overlay.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+            };
+
+            const closeModal = () => {
+                overlay.classList.remove('active');
+                overlay.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+            };
+
+            document.querySelectorAll('.start-instructions-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const catId = btn.getAttribute('data-category');
+                    openModal(catId);
+                });
+            });
+
+            if (cancelBtn) {
+                cancelBtn.addEventListener('click', closeModal);
+            }
+
+            if (overlay) {
+                overlay.addEventListener('click', (e) => {
+                    if (e.target === overlay) closeModal();
+                });
+            }
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && overlay.classList.contains('active')) {
+                    closeModal();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

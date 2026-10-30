@@ -1,0 +1,226 @@
+/* EcoQuest - Responsive Layout & Media Queries */
+
+/* Tablet (601px to 1024px) */
+@media screen and (max-width: 1024px) {
+    :root {
+        --sidebar-width: 240px;
+    }
+
+    /* Shift sidebar off-canvas by default */
+    .sidebar {
+        transform: translateX(-100%);
+        transition: transform var(--transition-normal);
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .mobile-nav-toggle {
+        display: inline-flex;
+    }
+
+    .top-header {
+        padding: 0 20px;
+    }
+
+    .content-body {
+        padding: 20px;
+    }
+
+    /* Dashboard columns stack vertically */
+    .dashboard-columns {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+    }
+
+    .welcome-card {
+        padding: 20px;
+    }
+
+    .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+}
+
+/* Medium & Small Tablet (601px to 800px) */
+@media screen and (max-width: 800px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .welcome-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .welcome-action {
+        width: 100%;
+    }
+
+    .welcome-action .btn {
+        width: 100%;
+    }
+}
+
+/* Mobile (600px and below) */
+@media screen and (max-width: 600px) {
+    :root {
+        --header-height: 58px;
+    }
+
+    .top-header {
+        padding: 0 14px;
+    }
+
+    .header-left {
+        gap: 10px;
+    }
+
+    .page-title {
+        font-size: 16px;
+    }
+
+    .header-date {
+        display: none; /* Hide date on small mobile to conserve header space */
+    }
+
+    .header-right {
+        gap: 10px;
+    }
+
+    .content-body {
+        padding: 14px;
+    }
+
+    .dashboard-grid {
+        gap: 16px;
+    }
+
+    /* Welcome Banner */
+    .welcome-card {
+        padding: 16px;
+    }
+
+    .welcome-title {
+        font-size: 19px;
+    }
+
+    .welcome-subtitle {
+        font-size: 13px;
+    }
+
+    /* Stats Grid */
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .stat-card {
+        padding: 14px;
+        gap: 12px;
+    }
+
+    .stat-icon-wrapper {
+        width: 38px;
+        height: 38px;
+    }
+
+    .stat-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .stat-value {
+        font-size: 20px;
+    }
+
+    /* Daily Challenge */
+    .challenge-card {
+        padding: 16px;
+    }
+
+    .challenge-title {
+        font-size: 16px;
+    }
+
+    .challenge-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .challenge-footer .btn {
+        width: 100%;
+    }
+
+    /* Quiz Categories */
+    .categories-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .category-card {
+        padding: 16px;
+    }
+
+    /* Weekly Activity */
+    .activity-card {
+        padding: 16px;
+    }
+
+    .activity-chart {
+        height: 110px;
+        gap: 4px;
+    }
+
+    .chart-bar-container {
+        max-width: 18px;
+        height: 75px;
+    }
+
+    /* Achievements */
+    .achievements-preview-card {
+        padding: 16px;
+    }
+
+    .achievement-item {
+        padding: 8px;
+    }
+
+    /* Touch target sizing */
+    .btn {
+        min-height: 42px;
+    }
+
+    /* Footer */
+    .site-footer {
+        padding: 14px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .footer-links {
+        justify-content: center;
+    }
+}
+

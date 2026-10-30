@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EcoQuest - Interactive environmental awareness quiz and learning dashboard.">
+    <title>Dashboard - EcoQuest</title>
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+    <!-- Core Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="dashboard">
+    <div class="app-container">
+        <!-- Reusable Sidebar Placeholder -->
+        <aside id="sidebar" class="sidebar" aria-label="Main sidebar navigation"></aside>
+
+        <!-- Mobile Drawer Backdrop Overlay -->
+        <div id="sidebarOverlay" class="sidebar-overlay" aria-hidden="true"></div>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <!-- Reusable Header Placeholder -->
+            <header id="header" class="top-header" role="banner"></header>
+
+            <main class="content-body" id="mainContent">
+                <div class="dashboard-grid">
+                    
+                    <!-- Section C: Welcome Section -->
+                    <section class="welcome-card" aria-labelledby="welcomeGreeting">
+                        <div class="welcome-content">
+                            <h2 class="welcome-title" id="welcomeGreeting">Good morning, Alex!</h2>
+                            <p class="welcome-subtitle">Small actions today create a greener tomorrow. Explore interactive quizzes and expand your eco knowledge.</p>
+                        </div>
+                        <div class="welcome-action">
+                            <a href="categories.html" class="btn btn-primary">
+                                <span>Start Learning</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </a>
+                        </div>
+                    </section>
+
+                    <!-- Section D: User Progress Section (3 Compact Cards) -->
+                    <section class="stats-grid" aria-label="User Progress Overview">
+                        <!-- Card 1: Total Eco Points -->
+                        <article class="stat-card">
+                            <div class="stat-icon-wrapper points">
+                                <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                </svg>
+                            </div>
+                            <div class="stat-content">
+                                <span class="stat-label">Total Eco Points</span>
+                                <div class="stat-value-group">
+                                    <span class="stat-value" id="statTotalPoints">1,250 XP</span>
+                                </div>
+                                <span class="stat-desc" id="statXpDesc">50 XP to Level 6</span>
+                            </div>
+                        </article>
+
+                        <!-- Card 2: Current Level -->
+                        <article class="stat-card">
+                            <div class="stat-icon-wrapper">
+                                <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                    <path d="m9 12 2 2 4-4"></path>
+                                </svg>
+                            </div>
+                            <div class="stat-content" style="flex: 1;">
+                                <span class="stat-label">Current Level</span>
+                                <div class="stat-value-group">
+                                    <span class="stat-value" id="statCurrentLevelName">Earth Protector</span>
+                                </div>
+                                <span class="stat-desc" id="statLevelDesc">Level 5 &bull; 89% completed</span>
+                                <div class="card-level-progress">
+                                    <div class="card-level-bar-track">
+                                        <div class="card-level-bar-fill" id="statLevelBarFill" style="width: 89%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 3: Learning Streak -->
+                        <article class="stat-card">
+                            <div class="stat-icon-wrapper">
+                                <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path>
+                                </svg>
+                            </div>
+                            <div class="stat-content">
+                                <span class="stat-label">Learning Streak</span>
+                                <div class="stat-value-group">
+                                    <span class="stat-value" id="statStreakDays">5 Days</span>
+                                </div>
+                                <span class="stat-desc" id="statStreakDesc">Active today &bull; Personal best: 7 days</span>
+                            </div>
+                        </article>
+                    </section>
+
+                    <!-- Main Columns: Content Split -->
+                    <div class="dashboard-columns">
+                        <!-- Left Column: Daily Challenge + Categories -->
+                        <div class="main-column">
+                            
+                            <!-- Section E: Daily Challenge Section -->
+                            <section aria-labelledby="dailyChallengeTitle">
+                                <article class="challenge-card" id="dashboardDailyChallengeCard">
+                                    <div class="challenge-header">
+                                        <div class="challenge-tag-group">
+                                            <span class="badge badge-accent">Featured Daily</span>
+                                            <span class="badge badge-mint" id="dashboardDailyCategoryBadge">Water Conservation</span>
+                                            <span class="badge badge-neutral" id="dashboardDailyStatusBadge">Available Today</span>
+                                        </div>
+                                        <div class="challenge-meta">
+                                            <span class="challenge-meta-item">
+                                                <svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                                    <circle cx="12" cy="12" r="10"></circle>
+                                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                                </svg>
+                                                <span id="dashboardDailyDuration">5 mins</span>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <h3 class="challenge-title" id="dailyChallengeTitle">Household Water Audit</h3>
+                                    <p class="challenge-desc" id="dashboardDailyDesc">Identify and practice 3 ways to reduce household tap and shower water consumption today.</p>
+
+                                    <div class="challenge-footer">
+                                        <div class="reward-info">
+                                            <span class="text-muted text-sm">Reward:</span>
+                                            <span class="badge badge-accent" id="dashboardDailyReward">+20 XP</span>
+                                        </div>
+                                        <button type="button" class="btn btn-primary btn-sm" id="dashboardDailyActionBtn">
+                                            <span>Start Challenge</span>
+                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                                <polyline points="9 18 15 12 9 6"></polyline>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </article>
+                            </section>
+
+                            <!-- Section F: Quiz Categories Section -->
+                            <section aria-labelledby="quizCategoriesTitle">
+                                <div class="categories-header">
+                                    <h2 class="section-title" id="quizCategoriesTitle">Quiz Categories</h2>
+                                    <a href="categories.html" class="text-sm" style="font-weight: 600;">View All</a>
+                                </div>
+
+                                <div class="categories-grid">
+                                    <!-- Category 1 -->
+                                    <article class="category-card">
+                                        <div>
+                                            <div class="category-icon-box">
+                                                <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                                    <path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"></path>
+                                                </svg>
+                                            </div>
+                                            <h3 class="category-title">Climate Change</h3>
+                                            <p class="category-desc">Understand greenhouse emissions, atmospheric warming trends, and scientific mitigation pathways.</p>
+                                        </div>
+                                        <div class="category-footer">
+                                            <span class="question-count">25 Questions</span>
+                                            <a href="categories.html" class="btn btn-secondary btn-sm" aria-label="Explore Climate Change quizzes">Explore</a>
+                                        </div>
+                                    </article>
+
+                                    <!-- Category 2 -->
+                                    <article class="category-card">
+                                        <div>
+                                            <div class="category-icon-box">
+                                                <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                                    <path d="M3 6h18"></path>
+                                                    <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
+                                                    <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
+                                                    <line x1="10" y1="11" x2="10" y2="17"></line>
+                                                    <line x1="14" y1="11" x2="14" y2="17"></line>
+                                                </svg>
+                                            </div>
+                                            <h3 class="category-title">Waste Management</h3>
+                                            <p class="category-desc">Explore circular economy principles, modern recycling techniques, and practical zero-waste habits.</p>
+                                        </div>
+                                        <div class="category-footer">
+                                            <span class="question-count">20 Questions</span>
+                                            <a href="categories.html" class="btn btn-secondary btn-sm" aria-label="Explore Waste Management quizzes">Explore</a>
+                                        </div>
+                                    </article>
+
+                                    <!-- Category 3 -->
+                                    <article class="category-card">
+                                        <div>
+                                            <div class="category-icon-box">
+                                                <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                                    <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+                                                    <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+                                                </svg>
+                                            </div>
+                                            <h3 class="category-title">Biodiversity</h3>
+                                            <p class="category-desc">Discover complex biomes, endangered species preservation, and critical habitat restoration efforts.</p>
+                                        </div>
+                                        <div class="category-footer">
+                                            <span class="question-count">30 Questions</span>
+                                            <a href="categories.html" class="btn btn-secondary btn-sm" aria-label="Explore Biodiversity quizzes">Explore</a>
+                                        </div>
+                                    </article>
+
+                                    <!-- Category 4 -->
+                                    <article class="category-card">
+                                        <div>
+                                            <div class="category-icon-box">
+                                                <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                                    <path d="M12 2v8"></path>
+                                                    <path d="m4.93 10.93 1.41 1.41"></path>
+                                                    <path d="M2 18h2"></path>
+                                                    <path d="M20 18h2"></path>
+                                                    <path d="m19.07 10.93-1.41 1.41"></path>
+                                                    <circle cx="12" cy="18" r="4"></circle>
+                                                </svg>
+                                            </div>
+                                            <h3 class="category-title">Renewable Energy</h3>
+                                            <p class="category-desc">Learn how solar, wind, and geothermal technologies power clean grids and replace fossil fuels.</p>
+                                        </div>
+                                        <div class="category-footer">
+                                            <span class="question-count">18 Questions</span>
+                                            <a href="categories.html" class="btn btn-secondary btn-sm" aria-label="Explore Renewable Energy quizzes">Explore</a>
+                                        </div>
+                                    </article>
+                                </div>
+                            </section>
+
+                        </div>
+
+                        <!-- Right Column: Weekly Activity + Achievements -->
+                        <div class="side-column">
+                            
+                            <!-- Section G: Weekly Activity Section -->
+                            <section class="activity-card" aria-labelledby="activityTitle">
+                                <div class="activity-header">
+                                    <h3 class="card-title" id="activityTitle">Weekly Activity</h3>
+                                    <span class="activity-summary">5 of 7 Days Active</span>
+                                </div>
+
+                                <div class="activity-chart" role="img" aria-label="Bar chart showing weekly learning activity: Monday 80%, Tuesday 65%, Wednesday 95%, Thursday 70%, Friday 45% today, Saturday and Sunday pending.">
+                                    <div class="chart-column">
+                                        <div class="chart-bar-container">
+                                            <div class="chart-bar active-day" style="height: 80%;" title="Mon: 25 mins"></div>
+                                        </div>
+                                        <span class="chart-day-label">M</span>
+                                    </div>
+                                    <div class="chart-column">
+                                        <div class="chart-bar-container">
+                                            <div class="chart-bar active-day" style="height: 65%;" title="Tue: 20 mins"></div>
+                                        </div>
+                                        <span class="chart-day-label">T</span>
+                                    </div>
+                                    <div class="chart-column">
+                                        <div class="chart-bar-container">
+                                            <div class="chart-bar active-day" style="height: 95%;" title="Wed: 35 mins"></div>
+                                        </div>
+                                        <span class="chart-day-label">W</span>
+                                    </div>
+                                    <div class="chart-column">
+                                        <div class="chart-bar-container">
+                                            <div class="chart-bar active-day" style="height: 70%;" title="Thu: 22 mins"></div>
+                                        </div>
+                                        <span class="chart-day-label">T</span>
+                                    </div>
+                                    <div class="chart-column">
+                                        <div class="chart-bar-container">
+                                            <div class="chart-bar today" style="height: 45%;" title="Fri (Today): 15 mins"></div>
+                                        </div>
+                                        <span class="chart-day-label today">F</span>
+                                    </div>
+                                    <div class="chart-column">
+                                        <div class="chart-bar-container">
+                                            <div class="chart-bar" style="height: 0%;" title="Sat: Not started"></div>
+                                        </div>
+                                        <span class="chart-day-label">S</span>
+                                    </div>
+                                    <div class="chart-column">
+                                        <div class="chart-bar-container">
+                                            <div class="chart-bar" style="height: 0%;" title="Sun: Not started"></div>
+                                        </div>
+                                        <span class="chart-day-label">S</span>
+                                    </div>
+                                </div>
+
+                                <div class="activity-legend">
+                                    <span>Time studied: <strong>117 mins</strong></span>
+                                    <span class="text-sm text-muted">Weekly Goal: 120m</span>
+                                </div>
+                            </section>
+
+                            <!-- Weekly Challenge Mission Card -->
+                            <section class="card" id="dashboardWeeklyChallengeCard" aria-labelledby="dashboardWeeklyChallengeTitle">
+                                <div class="card-header" style="margin-bottom: 10px;">
+                                    <span class="badge badge-mint">Weekly Mission</span>
+                                    <span class="badge badge-accent" id="dashboardWeeklyReward">+75 XP</span>
+                                </div>
+                                <h3 class="card-title" id="dashboardWeeklyChallengeTitle" style="font-size: 15px; margin-bottom: 4px;">Eco Knowledge Explorer</h3>
+                                <p class="text-sm text-muted" id="dashboardWeeklyDesc" style="margin-bottom: 12px;">Complete 5 environmental quizzes across any topic this week.</p>
+                                
+                                <div class="weekly-progress-wrap" style="margin-bottom: 10px;">
+                                    <div class="weekly-progress-labels">
+                                        <span>Progress</span>
+                                        <span id="dashboardWeeklyProgressLabel"><strong>3 / 5</strong></span>
+                                    </div>
+                                    <div class="progress-track" style="height: 6px;">
+                                        <div class="progress-fill" id="dashboardWeeklyProgressBar" style="width: 60%;"></div>
+                                    </div>
+                                </div>
+
+                                <a href="challenges.html" class="btn btn-outline btn-sm" style="width: 100%;">
+                                    <span>All Weekly Missions</span>
+                                </a>
+                            </section>
+
+                            <!-- Section H: Achievement Preview -->
+                            <section class="achievements-preview-card" aria-labelledby="achievementsPreviewTitle">
+                                <div class="card-header">
+                                    <h3 class="card-title" id="achievementsPreviewTitle">Achievements</h3>
+                                    <span class="badge badge-mint" id="dashboardAchievementsCount">4 of 12 Unlocked</span>
+                                </div>
+
+                                <div class="achievements-list" id="dashboardAchievementsList">
+                                    <!-- Rendered dynamically by EcoApp.renderDashboardAchievements -->
+                                </div>
+
+                                <a href="achievements.html" class="btn btn-outline btn-sm" style="width: 100%; margin-top: 14px;">
+                                    <span>Explore All 12 Badges</span>
+                                </a>
+                            </section>
+
+                            <!-- Leaderboard Preview Widget -->
+                            <section class="dashboard-preview-card" aria-labelledby="dashboardLeaderboardTitle">
+                                <div class="card-header" style="margin-bottom: 8px;">
+                                    <h3 class="card-title" id="dashboardLeaderboardTitle">Community Rankings</h3>
+                                    <a href="leaderboard.html" class="text-sm" style="font-weight: 600;">View All</a>
+                                </div>
+                                <p class="text-sm text-muted" style="margin-bottom: 10px;">Top active learners this week.</p>
+                                
+                                <div class="preview-leaderboard-list" id="dashboardLeaderboardPreviewList">
+                                    <!-- Rendered dynamically -->
+                                </div>
+
+                                <a href="leaderboard.html" class="btn btn-outline btn-sm" style="width: 100%;">
+                                    <span>Open Full Leaderboard</span>
+                                </a>
+                            </section>
+
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+
+            <!-- Reusable Footer Placeholder -->
+            <footer id="footer" class="site-footer" role="contentinfo"></footer>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/storage.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/gamification.js"></script>
+    <script src="js/challengeData.js"></script>
+    <script src="js/challenges.js"></script>
+    <script src="js/leaderboard.js"></script>
+    <script src="js/analytics.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

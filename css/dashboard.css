@@ -1,0 +1,2231 @@
+/* EcoQuest - Dashboard Specific Styles */
+
+/* Dashboard Layout Grid */
+.dashboard-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Welcome Section */
+.welcome-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.welcome-content {
+    max-width: 600px;
+}
+
+.welcome-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 6px;
+    letter-spacing: -0.01em;
+}
+
+.welcome-subtitle {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.45;
+}
+
+.welcome-action {
+    flex-shrink: 0;
+}
+
+/* Progress Section (3 Stat Cards) */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.stat-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 18px 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    transition: border-color var(--transition-fast);
+}
+
+.stat-card:hover {
+    border-color: #cbd4cb;
+}
+
+.stat-icon-wrapper {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-sm);
+    background-color: var(--mint);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.stat-icon {
+    width: 22px;
+    height: 22px;
+}
+
+.stat-icon-wrapper.points {
+    background-color: #fbf5e6;
+    color: #9c7310;
+}
+
+.stat-content {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.stat-label {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 4px;
+}
+
+.stat-value-group {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+}
+
+.stat-value {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.2;
+}
+
+.stat-subvalue {
+    font-size: 13px;
+    color: var(--muted);
+    font-weight: 500;
+}
+
+.stat-desc {
+    font-size: 12px;
+    color: var(--secondary);
+    margin-top: 4px;
+    font-weight: 500;
+}
+
+/* Main Content Two-Column Split */
+.dashboard-columns {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 24px;
+    align-items: start;
+}
+
+.main-column {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.side-column {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Daily Challenge Card (Prominent) */
+.challenge-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--primary);
+    border-radius: var(--radius-md);
+    padding: 22px;
+}
+
+.challenge-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.challenge-tag-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.challenge-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.challenge-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.meta-icon {
+    width: 14px;
+    height: 14px;
+}
+
+.challenge-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 8px;
+}
+
+.challenge-desc {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+.challenge-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+}
+
+.reward-info {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: var(--text);
+}
+
+.reward-points {
+    font-weight: 700;
+    color: #9c7310;
+}
+
+/* Quiz Categories Section */
+.categories-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.category-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: border-color var(--transition-fast);
+}
+
+.category-card:hover {
+    border-color: #cbd4cb;
+}
+
+.category-icon-box {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-sm);
+    background-color: var(--mint);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+}
+
+.category-icon {
+    width: 22px;
+    height: 22px;
+}
+
+.category-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+}
+
+.category-desc {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.45;
+    margin-bottom: 16px;
+    flex: 1;
+}
+
+.category-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+}
+
+.question-count {
+    font-size: 12px;
+    color: var(--muted);
+    font-weight: 500;
+}
+
+/* Weekly Activity Section */
+.activity-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 20px;
+}
+
+.activity-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.activity-summary {
+    font-size: 12px;
+    color: var(--secondary);
+    font-weight: 600;
+}
+
+.activity-chart {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 130px;
+    padding: 10px 4px 4px 4px;
+    border-bottom: 1px solid var(--border);
+    gap: 8px;
+}
+
+.chart-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    height: 100%;
+    justify-content: flex-end;
+}
+
+.chart-bar-container {
+    width: 100%;
+    max-width: 24px;
+    height: 90px;
+    background-color: #f1f4f1;
+    border-radius: 4px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.chart-bar {
+    width: 100%;
+    background-color: var(--primary);
+    border-radius: 4px 4px 0 0;
+    transition: height var(--transition-normal);
+}
+
+.chart-bar.active-day {
+    background-color: var(--secondary);
+}
+
+.chart-bar.today {
+    background-color: #e7bd59;
+}
+
+.chart-day-label {
+    font-size: 11px;
+    color: var(--muted);
+    font-weight: 600;
+}
+
+.chart-day-label.today {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.activity-legend {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 14px;
+    font-size: 12px;
+    color: var(--muted);
+}
+
+/* Achievement Preview Section */
+.achievements-preview-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 20px;
+}
+
+.achievements-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.achievement-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background-color: var(--surface);
+    transition: border-color var(--transition-fast);
+}
+
+.achievement-item:hover {
+    border-color: #cbd4cb;
+}
+
+.achievement-item.locked {
+    background-color: var(--background);
+    opacity: 0.75;
+}
+
+.achievement-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 16px;
+}
+
+.achievement-item.unlocked .achievement-icon {
+    background-color: var(--mint);
+    color: var(--primary);
+}
+
+.achievement-item.locked .achievement-icon {
+    background-color: #e6eae7;
+    color: var(--muted);
+}
+
+.achievement-icon svg {
+    width: 18px;
+    height: 18px;
+}
+
+.achievement-details {
+    flex: 1;
+    min-width: 0;
+}
+
+.achievement-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.achievement-status {
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.achievement-item.unlocked .achievement-status {
+    color: var(--secondary);
+}
+
+.achievement-item.locked .achievement-status {
+    color: var(--muted);
+}
+
+.achievement-desc {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.35;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* ========================================================
+   Phase 3 - Gamification, Achievements & Profile Styles
+   ======================================================== */
+
+/* Level Progress Bar Inside Cards */
+.card-level-progress {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.card-level-bar-track {
+    width: 100%;
+    height: 6px;
+    background-color: #E5E9E4;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 4px;
+}
+
+.card-level-bar-fill {
+    height: 100%;
+    background-color: var(--primary);
+    border-radius: 3px;
+    transition: width var(--transition-normal);
+}
+
+.card-level-text {
+    font-size: 11px;
+    color: var(--muted);
+    font-weight: 500;
+}
+
+/* Gamification Banners */
+.gamification-banner {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.gamification-banner.levelup-banner {
+    border-left: 4px solid var(--accent);
+    background-color: #fdfaf0;
+}
+
+.gamification-banner.badge-banner {
+    border-left: 4px solid var(--primary);
+    background-color: #f4f9f5;
+}
+
+.banner-icon-box {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-sm);
+    background-color: #fbf5e6;
+    color: #9c7310;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.banner-icon-box.badge {
+    background-color: var(--mint);
+    color: var(--primary);
+}
+
+.banner-text {
+    flex: 1;
+}
+
+.banner-subtitle {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.banner-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 2px;
+}
+
+.banner-desc {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.4;
+}
+
+.results-level-box {
+    background-color: var(--background);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 16px;
+    margin-bottom: 22px;
+    text-align: left;
+}
+
+.level-box-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text);
+    margin-bottom: 8px;
+}
+
+.level-box-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+/* Level Up Modal */
+.level-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(37, 45, 40, 0.45);
+    z-index: 130;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition-normal), visibility var(--transition-normal);
+}
+
+.level-modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.level-modal-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    max-width: 440px;
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+}
+
+.level-modal-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-sm);
+    background-color: #fbf5e6;
+    color: #9c7310;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px auto;
+}
+
+.level-modal-icon svg {
+    width: 30px;
+    height: 30px;
+}
+
+.level-modal-badge {
+    margin-bottom: 8px;
+}
+
+.level-modal-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 6px;
+}
+
+.level-modal-subtitle {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.45;
+    margin-bottom: 24px;
+}
+
+/* Achievements Page Layout */
+.achievements-page-container {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.achievements-summary-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 24px;
+}
+
+.achievements-summary-header {
+    margin-bottom: 18px;
+}
+
+.achievements-summary-header h2 {
+    font-size: 20px;
+    color: var(--primary);
+    margin-bottom: 4px;
+}
+
+.achievements-summary-header p {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.achievements-stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.achievement-stat-box {
+    background-color: var(--background);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 14px;
+    text-align: center;
+}
+
+.achievement-stat-val {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.2;
+}
+
+.achievement-stat-label {
+    font-size: 11px;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-top: 2px;
+    display: block;
+}
+
+.overall-progress-bar-wrap {
+    margin-top: 8px;
+}
+
+.overall-progress-bar-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: var(--muted);
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+/* Filter Bar */
+.achievements-filter-bar {
+    display: flex;
+    gap: 8px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 12px;
+}
+
+.filter-tab-btn {
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 7px 14px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text);
+    cursor: pointer;
+    transition: background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.filter-tab-btn:hover {
+    background-color: var(--background);
+}
+
+.filter-tab-btn.active {
+    background-color: var(--mint);
+    border-color: var(--primary);
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* Achievements Grid */
+.all-achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.achievement-full-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: border-color var(--transition-fast);
+}
+
+.achievement-full-card:hover {
+    border-color: #cbd4cb;
+}
+
+.achievement-full-card.unlocked {
+    border-top: 3px solid var(--primary);
+}
+
+.achievement-full-card.locked {
+    background-color: #fafbfa;
+    opacity: 0.85;
+}
+
+.ach-card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.ach-card-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.achievement-full-card.unlocked .ach-card-icon {
+    background-color: var(--mint);
+    color: var(--primary);
+}
+
+.achievement-full-card.locked .ach-card-icon {
+    background-color: #e5e9e5;
+    color: var(--muted);
+}
+
+.ach-card-icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+.ach-card-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 4px;
+}
+
+.ach-card-desc {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.45;
+    margin-bottom: 14px;
+    flex: 1;
+}
+
+.ach-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+    font-size: 12px;
+}
+
+.ach-condition-pill {
+    font-size: 11px;
+    background-color: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 2px 6px;
+    color: var(--text);
+}
+
+/* Profile Page Layout */
+.profile-page-container {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.profile-identity-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.profile-identity-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-avatar-large {
+    width: 64px;
+    height: 64px;
+    border-radius: var(--radius-sm);
+    background-color: var(--mint);
+    color: var(--primary);
+    font-size: 22px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border);
+    flex-shrink: 0;
+}
+
+.profile-headings h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 4px;
+}
+
+.profile-headings .user-role-line {
+    font-size: 13px;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.profile-level-widget {
+    min-width: 280px;
+    background-color: var(--background);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 14px 18px;
+}
+
+.profile-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.profile-stat-box {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.profile-stat-label {
+    font-size: 12px;
+    color: var(--muted);
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.profile-stat-number {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 4px;
+}
+
+.profile-stat-detail {
+    font-size: 12px;
+    color: var(--secondary);
+    font-weight: 500;
+}
+
+.profile-panels-grid {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 24px;
+}
+
+.profile-preferences-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 22px;
+}
+
+.pref-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.pref-row:last-child {
+    border-bottom: none;
+}
+
+.pref-info h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 2px;
+}
+
+.pref-info p {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1024px) {
+    .all-achievements-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .profile-panels-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .achievements-stats-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .profile-identity-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .profile-level-widget {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .profile-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .all-achievements-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .achievements-stats-row {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .achievements-filter-bar {
+        overflow-x: auto;
+    }
+}
+
+/* ========================================================
+   Phase 4 - Environmental Challenges & Leaderboard Styles
+   ======================================================== */
+
+/* Challenges Layout */
+.challenges-page-container {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Featured Daily Challenge Hero Card */
+.featured-challenge-hero {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--primary);
+    border-radius: var(--radius-md);
+    padding: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.featured-hero-content {
+    max-width: 680px;
+}
+
+.featured-badge-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.featured-hero-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 6px;
+}
+
+.featured-hero-desc {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.5;
+    margin-bottom: 14px;
+}
+
+.featured-hero-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.featured-hero-action {
+    flex-shrink: 0;
+}
+
+/* Section Title Row */
+.section-title-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 14px;
+    gap: 12px;
+}
+
+/* Daily Challenges Grid */
+.challenges-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.challenge-item-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: border-color var(--transition-fast);
+}
+
+.challenge-item-card:hover {
+    border-color: #cbd4cb;
+}
+
+.challenge-item-card.completed {
+    border-left: 3px solid var(--success);
+    background-color: #fbfdfb;
+}
+
+.challenge-item-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.challenge-item-tags {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.challenge-item-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 4px;
+}
+
+.challenge-item-desc {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.45;
+    margin-bottom: 16px;
+    flex: 1;
+}
+
+.challenge-item-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+}
+
+/* Weekly Challenges Grid */
+.weekly-challenges-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.weekly-challenge-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: border-color var(--transition-fast);
+}
+
+.weekly-challenge-card:hover {
+    border-color: #cbd4cb;
+}
+
+.weekly-challenge-card.completed {
+    border-top: 3px solid var(--success);
+}
+
+.weekly-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.weekly-tags {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.weekly-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 4px;
+}
+
+.weekly-desc {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.45;
+    margin-bottom: 14px;
+}
+
+.weekly-progress-wrap {
+    background-color: var(--background);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 10px 12px;
+    margin-bottom: 12px;
+}
+
+.weekly-progress-labels {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    color: var(--text);
+    margin-bottom: 6px;
+}
+
+.weekly-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    border-top: 1px solid var(--border);
+}
+
+/* Reusable Table Styles */
+.table-responsive-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.eco-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    text-align: left;
+}
+
+.eco-table th {
+    background-color: var(--background);
+    color: var(--muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+}
+
+.eco-table td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+    vertical-align: middle;
+}
+
+.eco-table tbody tr:hover {
+    background-color: #fafbfa;
+}
+
+.challenge-history-section {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 22px;
+}
+
+/* Leaderboard Page Layout */
+.leaderboard-page-container {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.leaderboard-intro-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 24px;
+}
+
+.leaderboard-intro-header h2 {
+    font-size: 22px;
+    color: var(--primary);
+    margin-bottom: 4px;
+}
+
+.leaderboard-intro-header p {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 16px;
+}
+
+.leaderboard-notice-box {
+    background-color: var(--background);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--secondary);
+    border-radius: var(--radius-sm);
+    padding: 10px 14px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 12px;
+    color: var(--text);
+    line-height: 1.45;
+    margin-bottom: 20px;
+}
+
+.leaderboard-notice-box svg {
+    color: var(--secondary);
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+/* My Ranking Highlight Card */
+.my-ranking-card {
+    background-color: var(--mint);
+    border: 1px solid rgba(36, 92, 66, 0.2);
+    border-radius: var(--radius-sm);
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.my-rank-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.rank-badge-large {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--primary);
+    line-height: 1;
+}
+
+.my-rank-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.my-rank-name-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.my-rank-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.my-rank-subtext {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.my-rank-right {
+    text-align: right;
+}
+
+.my-rank-stat .stat-num {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary);
+    display: block;
+}
+
+.my-rank-stat .stat-sub {
+    font-size: 11px;
+    color: var(--muted);
+}
+
+/* Leaderboard Toolbar & Filters */
+.leaderboard-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.leaderboard-filter-tabs {
+    display: flex;
+    gap: 8px;
+}
+
+.leaderboard-tab-btn {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text);
+    cursor: pointer;
+    transition: background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.leaderboard-tab-btn:hover {
+    background-color: var(--background);
+}
+
+.leaderboard-tab-btn.active {
+    background-color: var(--mint);
+    border-color: var(--primary);
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* Leaderboard Table Styles */
+.leaderboard-table-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.current-user-row {
+    background-color: #f3f8f4 !important;
+    font-weight: 600;
+}
+
+.player-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.player-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-sm);
+    background-color: var(--background);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--muted);
+    flex-shrink: 0;
+}
+
+.player-avatar.user-avatar-active {
+    background-color: var(--mint);
+    color: var(--primary);
+    border-color: rgba(36, 92, 66, 0.3);
+}
+
+.player-names {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.player-name {
+    font-size: 13px;
+    color: var(--text);
+}
+
+.badge-xs {
+    font-size: 10px;
+    padding: 1px 6px;
+}
+
+.rank-number {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--muted);
+}
+
+.rank-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.rank-gold {
+    background-color: #fbf5e6;
+    color: #9c7310;
+    border: 1px solid rgba(231, 189, 89, 0.5);
+}
+
+.rank-silver {
+    background-color: #f0f2f0;
+    color: #5c665e;
+    border: 1px solid #d5dad6;
+}
+
+.rank-bronze {
+    background-color: #f7ede6;
+    color: #915d3a;
+    border: 1px solid #e8caba;
+}
+
+/* Dashboard Leaderboard Preview Widget */
+.dashboard-preview-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 20px;
+}
+
+.preview-leaderboard-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 12px 0 16px 0;
+}
+
+.preview-player-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 10px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+    font-size: 12px;
+}
+
+.preview-player-row.is-me {
+    background-color: var(--mint);
+    border-color: rgba(36, 92, 66, 0.25);
+    font-weight: 600;
+}
+
+/* Phase 4 Responsive Breakpoints */
+@media screen and (max-width: 900px) {
+    .challenges-grid,
+    .weekly-challenges-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-challenge-hero {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .featured-hero-action {
+        width: 100%;
+    }
+
+    .featured-hero-action .btn {
+        width: 100%;
+    }
+
+    .my-ranking-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .my-rank-right {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .leaderboard-toolbar {
+        overflow-x: auto;
+    }
+
+    .leaderboard-filter-tabs {
+        width: 100%;
+    }
+
+    .eco-table th,
+    .eco-table td {
+        padding: 10px 12px;
+    }
+}
+
+/* ==========================================================================
+   Phase 5 – User Profile & Learning Analytics Styles
+   ========================================================================== */
+
+/* Profile Header & Identity Elements */
+.profile-name-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.edit-profile-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    font-size: 12px;
+}
+
+.profile-avatar-large {
+    color: #FFFFFF;
+    font-weight: 700;
+    transition: background-color var(--transition-fast);
+}
+
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.section-header-row {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.section-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text);
+}
+
+/* Category Performance Breakdown Grid */
+.category-performance-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.category-perf-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cat-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cat-icon-wrap {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-sm);
+    background-color: var(--mint);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cat-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 2px;
+}
+
+.cat-desc {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+
+.cat-stat-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+.cat-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 6px;
+    padding-top: 8px;
+    border-top: 1px solid var(--border);
+}
+
+.cat-link {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.cat-link:hover {
+    text-decoration: underline;
+}
+
+/* Two Column Layout (Weekly Chart + Badges Preview) */
+.profile-two-column-layout {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 24px;
+}
+
+.profile-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 22px;
+}
+
+.card-header-clean {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.card-subtitle {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 2px;
+}
+
+/* CSS-based Weekly Activity Distribution Bar Chart */
+.weekly-bar-chart {
+    display: flex;
+    flex-direction: column;
+    padding-top: 8px;
+}
+
+.chart-bars-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    height: 150px;
+    padding: 0 10px;
+    border-bottom: 2px solid var(--border);
+}
+
+.chart-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    max-width: 44px;
+    height: 100%;
+    justify-content: flex-end;
+}
+
+.bar-value-bubble {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--primary);
+    height: 16px;
+    margin-bottom: 4px;
+}
+
+.bar-track {
+    width: 20px;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    background-color: var(--background);
+    border-radius: 4px 4px 0 0;
+}
+
+.bar-fill {
+    width: 100%;
+    background-color: var(--primary);
+    border-radius: 4px 4px 0 0;
+    transition: height var(--transition-normal);
+}
+
+.chart-bar-today .bar-fill {
+    background-color: var(--secondary);
+}
+
+.chart-bar-today .day-code {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.bar-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    margin-top: 8px;
+    font-size: 11px;
+    color: var(--muted);
+}
+
+.today-dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: var(--primary);
+}
+
+.chart-summary-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 14px;
+    padding-top: 10px;
+}
+
+/* Badges Showcase Preview */
+.badges-preview-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.badge-preview-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    background-color: var(--background);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+}
+
+.badge-icon-disc {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--mint);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.badge-preview-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.badge-preview-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.badge-preview-date {
+    font-size: 11px;
+    color: var(--muted);
+}
+
+/* Activity Feed */
+.activity-history-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 440px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.activity-feed-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 12px 14px;
+    background-color: var(--background);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+}
+
+.activity-type-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.activity-type-quiz_completed {
+    background-color: var(--mint);
+    color: var(--primary);
+}
+
+.activity-type-challenge_completed {
+    background-color: #fbf5e6;
+    color: #9c7310;
+}
+
+.activity-type-achievement_unlocked {
+    background-color: #edf6ee;
+    color: #2d7348;
+}
+
+.activity-type-level_up {
+    background-color: var(--mint);
+    color: var(--primary);
+}
+
+.activity-feed-details {
+    flex: 1;
+    min-width: 0;
+}
+
+.activity-feed-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 2px;
+}
+
+.activity-feed-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.activity-feed-desc {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 4px;
+}
+
+.activity-feed-time {
+    font-size: 11px;
+    color: var(--muted);
+}
+
+/* Data Management Preferences */
+.pref-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-danger-outline {
+    border-color: #d9534f;
+    color: #c93b3b;
+}
+
+.btn-danger-outline:hover {
+    background-color: #fdf2f2;
+    border-color: #c93b3b;
+}
+
+.btn-danger {
+    background-color: #c93b3b;
+    border: 1px solid #b33232;
+    color: #FFFFFF;
+}
+
+.btn-danger:hover {
+    background-color: #b33232;
+}
+
+.text-danger {
+    color: #c93b3b;
+}
+
+/* Modals */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(25, 33, 28, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 16px;
+}
+
+.modal-dialog {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    width: 100%;
+    max-width: 480px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.modal-dialog-sm {
+    max-width: 420px;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+.modal-header h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.modal-close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    line-height: 1;
+    color: var(--muted);
+    cursor: pointer;
+    padding: 0 4px;
+}
+
+.modal-close-btn:hover {
+    color: var(--text);
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.modal-avatar-preview-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 14px;
+    background-color: var(--background);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    margin-bottom: 16px;
+}
+
+.avatar-preview-circle {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: #FFFFFF;
+    flex-shrink: 0;
+}
+
+.avatar-theme-picker {
+    display: flex;
+    gap: 10px;
+    margin-top: 6px;
+}
+
+.theme-swatch {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-sm);
+    border: 2px solid transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.theme-swatch:hover {
+    transform: scale(1.05);
+}
+
+.theme-swatch.is-selected {
+    border-color: var(--text);
+}
+
+.swatch-check {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.warning-callout {
+    background-color: #fff9e6;
+    border-left: 3px solid var(--accent);
+    padding: 10px 14px;
+    font-size: 12px;
+    color: var(--text);
+    border-radius: var(--radius-sm);
+    margin-bottom: 16px;
+}
+
+/* Toast Notifications */
+.toast-container {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 1100;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    pointer-events: none;
+}
+
+.profile-toast {
+    background-color: var(--text);
+    color: #FFFFFF;
+    padding: 12px 18px;
+    border-radius: var(--radius-sm);
+    font-size: 13px;
+    font-weight: 500;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity var(--transition-normal), transform var(--transition-normal);
+    pointer-events: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.profile-toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.profile-toast.toast-error {
+    background-color: #c93b3b;
+}
+
+/* Phase 5 Responsive Breakpoints */
+@media screen and (max-width: 900px) {
+    .category-performance-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-two-column-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .profile-name-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .modal-dialog {
+        max-width: 100%;
+        margin: 10px;
+    }
+
+    .chart-bars-container {
+        height: 120px;
+    }
+
+    .bar-track {
+        width: 14px;
+    }
+}
+
